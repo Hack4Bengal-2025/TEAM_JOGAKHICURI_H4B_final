@@ -1,0 +1,177 @@
+:root {
+    --primary-color: #6366f1;
+    --primary-dark: #4f46e5;
+    --bg-dark: #0f172a;
+    --bg-card: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --border-color: #334155;
+    --success-color: #10b981;
+    --gradient-primary: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    --gradient-card: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+}
+
+.notes-list-container {
+    padding: 2rem 1rem;
+}
+
+.note-card {
+    background: var(--gradient-card);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.note-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    border-color: var(--primary-color);
+}
+
+.note-card-orange {
+    border-left: 4px solid #f97316;
+}
+
+.note-card-yellow {
+    border-left: 4px solid #eab308;
+}
+
+.note-card-purple {
+    border-left: 4px solid #a855f7;
+}
+
+.note-card-blue {
+    border-left: 4px solid #3b82f6;
+}
+
+.note-card-green {
+    border-left: 4px solid #22c55e;
+}
+
+.card-title {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.card-subtitle {
+    color: var(--text-secondary);
+}
+
+.card-text {
+    color: var(--text-primary);
+    opacity: 0.9;
+}
+
+.category-tag {
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 1.5rem;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.category-tag:hover {
+    background: rgba(99, 102, 241, 0.2);
+    transform: translateY(-1px);
+}
+
+.ai-badge {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--success-color);
+    padding: 0.5rem 1rem;
+    border-radius: 1.5rem;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.ai-badge:hover {
+    background: rgba(16, 185, 129, 0.2);
+    transform: translateY(-1px);
+}
+
+.btn {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: var(--gradient-primary);
+    border: none;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    background: transparent;
+}
+
+.btn-outline-primary:hover {
+    background: var(--gradient-primary);
+    border-color: transparent;
+    color: white;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}
+
+.empty-state {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.alert {
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.text-primary {
+    color: #4a90e2 !important;
+} 

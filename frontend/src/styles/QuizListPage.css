@@ -1,0 +1,136 @@
+.quiz-list-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.quiz-card {
+    background: var(--background-color, #ffffff);
+    border-radius: 10px;
+    padding: 20px;
+    min-height: 200px;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    border: 1px solid var(--border-color);
+}
+
+.quiz-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.quiz-card.quiz-card-orange {
+    background: var(--gradient-card);
+    border: 1px solid var(--border-color);
+}
+
+.quiz-card.quiz-card-yellow {
+    background: var(--gradient-card);
+    border: 1px solid var(--border-color);
+}
+
+.quiz-card.quiz-card-purple {
+    background: var(--gradient-card);
+    border: 1px solid var(--border-color);
+}
+
+.quiz-card.quiz-card-blue {
+    background: var(--gradient-card);
+    border: 1px solid var(--border-color);
+}
+
+.quiz-card.quiz-card-green {
+    background: var(--gradient-card);
+    border: 1px solid var(--border-color);
+}
+
+.quiz-card .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    word-break: break-word;
+    color: var(--text-color);
+}
+
+.quiz-card .content {
+    font-size: 16px;
+    flex-grow: 1;
+    word-break: break-word;
+    color: var(--text-secondary);
+}
+
+.quiz-card .date {
+    font-size: 12px;
+    color: var(--text-tertiary);
+    margin-top: 15px;
+}
+
+.ai-badge {
+    background: var(--primary-color-10);
+    color: var(--primary-color);
+    padding: 4px 8px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.empty-state {
+    background: var(--gradient-card);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.empty-state:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Dark mode specific overrides */
+@media (prefers-color-scheme: dark) {
+    .quiz-card {
+        background: var(--background-color-dark, #1a1a1a);
+    }
+
+    .quiz-card:hover {
+        border-color: var(--primary-color);
+    }
+
+    .quiz-card .title {
+        color: var(--text-color-dark, #ffffff);
+    }
+
+    .quiz-card .content {
+        color: var(--text-secondary-dark, #a3a3a3);
+    }
+
+    .quiz-card .date {
+        color: var(--text-tertiary-dark, #737373);
+    }
+
+    .ai-badge {
+        background: var(--primary-color-20);
+    }
+}
